@@ -2,7 +2,7 @@
 site:
   title: Rag Catalog Model
   url: https://uuidea.github.io/rag-document-catalog-model
-  # start_page: ROOT::index.adoc
+  start_page: ROOT:schema:index.adoc
 content:
   sources: 
   - url: .

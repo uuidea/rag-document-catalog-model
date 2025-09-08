@@ -1,0 +1,34 @@
+= `Activity`
+:toclevels: 4
+
+
++++An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| http://www.w3.org/ns/prov#Activity[`prov:Activity`]
+
+
+
+
+|===
+
+== Class hierarchy
+* *`Activity`*
+
+
+== Slots
+
+
+This class has no slots.
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

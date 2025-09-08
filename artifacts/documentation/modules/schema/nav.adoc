@@ -4,6 +4,14 @@
 ** Classes
 *** xref::class/.adoc[ (root)]
 
+*** xref::class/Activity.adoc[Activity]
+
+
+
+*** xref::class/Agent.adoc[Agent]
+
+
+
 *** xref::class/Asset.adoc[Asset]
 
 
@@ -20,7 +28,15 @@
 
 
 
+*** xref::class/FileFormat.adoc[FileFormat]
+
+
+
 *** xref::class/MarkDownFile.adoc[MarkDownFile]
+
+
+
+*** xref::class/SoftwareAgent.adoc[SoftwareAgent]
 
 
 

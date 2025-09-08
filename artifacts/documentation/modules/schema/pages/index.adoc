@@ -7,6 +7,12 @@
 | Name | Description
 
 
+| xref::class/Activity.adoc[`Activity`]
+| +++An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.+++
+
+| xref::class/Agent.adoc[`Agent`]
+| +++An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.+++
+
 | xref::class/Asset.adoc[`Asset`]
 | +++An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.+++
 
@@ -19,8 +25,14 @@
 | xref::class/Entity.adoc[`Entity`]
 | +++An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.+++
 
+| xref::class/FileFormat.adoc[`FileFormat`]
+| +++A digital resource format.+++
+
 | xref::class/MarkDownFile.adoc[`MarkDownFile`]
 | +++Not a meaningful class, but here for illustrative purposes. Represents the processed original document into a markdown file+++
+
+| xref::class/SoftwareAgent.adoc[`SoftwareAgent`]
+| +++A software agent is running software.+++
 
 |===
 

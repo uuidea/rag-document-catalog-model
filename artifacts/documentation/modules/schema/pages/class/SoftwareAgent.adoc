@@ -1,0 +1,34 @@
+= `SoftwareAgent`
+:toclevels: 4
+
+
++++A software agent is running software.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| http://www.w3.org/ns/prov#SoftwareAgent[`prov:SoftwareAgent`]
+
+
+
+
+|===
+
+== Class hierarchy
+* *`SoftwareAgent`*
+
+
+== Slots
+
+
+This class has no slots.
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.
