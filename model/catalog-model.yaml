@@ -1,0 +1,93 @@
+name: CoreEquipmentProfile
+description: This vocabulary is describing the core equipment profile from IEC 61970-600-2.
+title: Core Equipment Vocabulary
+id: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  dc: http://purl.org/dc/elements/1.1/
+  dcat: http://www.w3.org/ns/dcat#
+  dct: http://purl.org/dc/terms/
+  owl: http://www.w3.org/2002/07/owl#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  sh: http://www.w3.org/ns/shacl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  adms: http://www.w3.org/ns/adms#
+  prov:	http://www.w3.org/ns/prov#
+  foaf:	http://xmlns.com/foaf/0.1/
+  
+default_curi_maps:
+- semweb_context
+default_prefix: this
+default_range: string
+
+classes:
+  Entity: 
+    desctiption:
+    class_uri: prov:Entity
+
+  Asset:
+    description:  
+      An abstract entity that reflects the intellectual content 
+      of the asset and represents those characteristics of the 
+      asset that are independent of its physical embodiment. 
+      This abstract entity combines the FRBR entities work 
+      (a distinct intellectual or artistic creation) and 
+      expression (the intellectual or artistic realization of a 
+      work). 
+    is_a: Entity  
+    class_uri: adms:Asset
+    slots:
+      - distribution  
+
+
+  AssetDistribution:
+    description: 
+      A particular physical embodiment of an Asset, which is 
+      an example of the FRBR entity manifestation (the physical 
+      embodiment of an expression of a work). 
+    is_a: Entity    
+    class_uri: adms:AssetDistribution  
+    slots:
+      - wasDerivedFrom
+      - wasGeneratedBy
+      - modified
+
+  MarkDownFile:
+    description: 
+      Not a meaningful class, but here for illustrative purposes.
+      Represents the processed original document into a markdown file
+    is_a: AssetDistribution  
+
+
+
+slots:
+  distribution:
+    description:
+    slot_uri: dcat:distribution
+    range: AssetDistribution
+    required: false
+    multivalued: true
+
+  modified:
+    description:
+    slot_uri: dct:issued
+    required: true
+    multivalued: false
+
+  wasDerivedFrom:
+    description:
+    slot_uri: prov:wasDerivedFrom
+    range: Entity
+    required: false
+    multivalued: true
+
+  wasGeneratedBy:
+    description:
+    slot_uri: prov:wasGeneratedBy
+    
+
+
