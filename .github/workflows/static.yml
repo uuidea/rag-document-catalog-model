@@ -43,7 +43,7 @@
 #         uses: actions/deploy-pages@v4
 
 
-name: Publish to GitHub Pages
+name: Deploy static content to Pages
 on:
   workflow_dispatch:
 concurrency:
