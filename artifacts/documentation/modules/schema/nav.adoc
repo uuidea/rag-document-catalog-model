@@ -1,0 +1,26 @@
+[.truncate]
+* Information model
+** xref::index.adoc[Index]
+** Classes
+*** xref::class/.adoc[ (root)]
+
+*** xref::class/Asset.adoc[Asset]
+
+
+
+*** xref::class/AssetDistribution.adoc[AssetDistribution]
+
+
+
+*** xref::class/Chunk.adoc[Chunk]
+
+
+
+*** xref::class/Entity.adoc[Entity]
+
+
+
+*** xref::class/MarkDownFile.adoc[MarkDownFile]
+
+
+

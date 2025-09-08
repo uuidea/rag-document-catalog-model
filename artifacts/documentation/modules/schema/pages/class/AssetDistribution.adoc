@@ -1,0 +1,37 @@
+= `AssetDistribution`
+:toclevels: 4
+
+
++++A particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| http://www.w3.org/ns/adms#AssetDistribution[`adms:AssetDistribution`]
+
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/Entity.adoc[`Entity`]
+** *`AssetDistribution`*
+ *** xref::class/Chunk.adoc[`Chunk`]
+ *** xref::class/MarkDownFile.adoc[`MarkDownFile`]
+
+
+== Slots
+
+
+This class has no slots.
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

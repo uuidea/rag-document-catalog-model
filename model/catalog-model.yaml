@@ -1,7 +1,7 @@
-name: CoreEquipmentProfile
-description: This vocabulary is describing the core equipment profile from IEC 61970-600-2.
+name: CatalogModel
+description: This vocabulary describes a standards based model for managing documents in a rag pipeline
 title: Core Equipment Vocabulary
-id: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+id: https://www.uuidea.eu/profiles/CatalogModel
 imports:
 - linkml:types
 prefixes:
@@ -16,8 +16,10 @@ prefixes:
   skos: http://www.w3.org/2004/02/skos/core#
   xsd: http://www.w3.org/2001/XMLSchema#
   adms: http://www.w3.org/ns/adms#
-  prov:	http://www.w3.org/ns/prov#
-  foaf:	http://xmlns.com/foaf/0.1/
+
+  prov: http://www.w3.org/ns/prov#
+  foaf: http://xmlns.com/foaf/0.1/
+  this: https://www.uuidea.eu/profiles/CatalogModel
   
 default_curi_maps:
 - semweb_context
@@ -25,20 +27,17 @@ default_prefix: this
 default_range: string
 
 classes:
-  Entity: 
-    desctiption:
-    class_uri: prov:Entity
+  Entity:
+    description: 
+      An entity is a physical, digital, conceptual, or other kind of thing with 
+      some fixed aspects; entities may be real or imaginary. 
+    class_uri: prov:Entity   
 
-  Asset:
-    description:  
-      An abstract entity that reflects the intellectual content 
-      of the asset and represents those characteristics of the 
-      asset that are independent of its physical embodiment. 
-      This abstract entity combines the FRBR entities work 
-      (a distinct intellectual or artistic creation) and 
-      expression (the intellectual or artistic realization of a 
-      work). 
-    is_a: Entity  
+  Asset: 
+    description: 
+      An entity is a physical, digital, conceptual, or other kind of thing with 
+      some fixed aspects; entities may be real or imaginary. 
+    is_a: Entity   
     class_uri: adms:Asset
     slots:
       - distribution  
@@ -62,31 +61,40 @@ classes:
       Represents the processed original document into a markdown file
     is_a: AssetDistribution  
 
+  Chunk:
+    description: 
+      Not a meaningful class, but here for illustrative purposes.
+      Represents the small part of the markdown document. 
+    is_a: AssetDistribution  
 
 
 slots:
   distribution:
-    description:
+    description: An available distribution of the dataset.
     slot_uri: dcat:distribution
     range: AssetDistribution
     required: false
     multivalued: true
 
   modified:
-    description:
-    slot_uri: dct:issued
+    description: Most recent date on which the resource was changed, updated or modified.
+    slot_uri: dct:modified
     required: true
     multivalued: false
 
   wasDerivedFrom:
     description:
+      A derivation is a transformation of an entity into another, an update of an entity 
+      resulting in a new one, or the construction of a new entity based on a pre-existing entity.
     slot_uri: prov:wasDerivedFrom
     range: Entity
     required: false
     multivalued: true
 
   wasGeneratedBy:
-    description:
+    description: 
+      Generation is the completion of production of a new entity by an activity. 
+      This entity did not exist before generation and becomes available for usage after this generation.
     slot_uri: prov:wasGeneratedBy
     
 

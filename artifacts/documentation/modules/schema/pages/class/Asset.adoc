@@ -1,0 +1,34 @@
+= `Asset`
+:toclevels: 4
+
+
++++An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| http://www.w3.org/ns/adms#Asset[`adms:Asset`]
+
+
+
+
+|===
+
+== Class hierarchy
+* *`Asset`*
+
+
+== Slots
+
+
+This class has no slots.
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

@@ -1,0 +1,35 @@
+= Index
+
+== Classes
+
+[cols="1,2"]
+|===
+| Name | Description
+
+
+| xref::class/Asset.adoc[`Asset`]
+| +++An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.+++
+
+| xref::class/AssetDistribution.adoc[`AssetDistribution`]
+| +++A particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work).+++
+
+| xref::class/Chunk.adoc[`Chunk`]
+| +++Not a meaningful class, but here for illustrative purposes. Represents the small part of the markdown document.+++
+
+| xref::class/Entity.adoc[`Entity`]
+| +++An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.+++
+
+| xref::class/MarkDownFile.adoc[`MarkDownFile`]
+| +++Not a meaningful class, but here for illustrative purposes. Represents the processed original document into a markdown file+++
+
+|===
+
+== Types
+
+No types are defined in the schema.
+
+
+== Enumerations
+
+
+No enumerations are defined in the schema.

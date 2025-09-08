@@ -1,0 +1,33 @@
+= `MarkDownFile`
+:toclevels: 4
+
+
++++Not a meaningful class, but here for illustrative purposes. Represents the processed original document into a markdown file+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/Entity.adoc[`Entity`]
+** xref::class/AssetDistribution.adoc[`AssetDistribution`]
+*** *`MarkDownFile`*
+
+
+== Slots
+
+
+This class has no slots.
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.
