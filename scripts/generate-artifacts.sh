@@ -1,4 +1,3 @@
-Run
 #!/bin/bash
 
 poetry run python -m linkml_asciidoc_generator.main \

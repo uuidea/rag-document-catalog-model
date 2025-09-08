@@ -19,7 +19,8 @@
 |===
 
 == Class hierarchy
-* *`Asset`*
+* xref::class/Entity.adoc[`Entity`]
+** *`Asset`*
 
 
 == Slots

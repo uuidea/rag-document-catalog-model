@@ -20,6 +20,7 @@
 
 == Class hierarchy
 * *`Entity`*
+ ** xref::class/Asset.adoc[`Asset`]
  ** xref::class/AssetDistribution.adoc[`AssetDistribution`]
 
 
