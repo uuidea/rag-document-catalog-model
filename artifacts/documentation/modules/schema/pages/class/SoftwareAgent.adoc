@@ -25,7 +25,116 @@
 == Slots
 
 
-This class has no slots.
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<accessURL,`accessURL`>>
+//| [[slots_table.accessURL]]<<accessURL,`accessURL`>>
+| 0..1 +
+xref::enumeration/Uriorcurie.adoc[`Uriorcurie`]
+| _n/a_
+| _n/a_
+
+| <<title,`title`>>
+//| [[slots_table.title]]<<title,`title`>>
+| 1 +
+https://w3id.org/linkml/String[`string`]
+| +++A name given to the resource.+++
+| _n/a_
+
+| <<version,`version`>>
+//| [[slots_table.version]]<<version,`version`>>
+| 1 +
+https://w3id.org/linkml/String[`string`]
+| +++The version indicator (name or identifier) of a resource.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#accessURL]
+=== `accessURL`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://www.w3.org/ns/dcat#accessURL[`dcat:accessURL`]
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/Uriorcurie.adoc[`Uriorcurie`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.accessURL,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#title]
+=== `title`
++++A name given to the resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://purl.org/dc/terms/title[`dct:title`]
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.title,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#version]
+=== `version`
++++The version indicator (name or identifier) of a resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://www.w3.org/ns/dcat#version[`dcat:version`]
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.version,&#10548;>>
+--
+////
+
+
+
 
 
 == Used by

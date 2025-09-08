@@ -25,10 +25,174 @@
 == Slots
 
 
-This class has no slots.
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+Activity {
+  style {
+    fill: "#cccccc"
+    shadow: true
+  }
+}
+
+
+
+Agent {
+  style {
+    fill: "#cccccc"
+    shadow: true
+  }
+}
+
+
+
+
+Activity -> Agent: wasAssociatedWith
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<endedAtTime,`endedAtTime`>>
+//| [[slots_table.endedAtTime]]<<endedAtTime,`endedAtTime`>>
+| 0..1 +
+https://w3id.org/linkml/Datetime[`datetime`]
+| +++End is when an activity is deemed to have been ended by an entity, known as trigger. The activity no longer exists after its...+++
+| _n/a_
+
+| <<wasAssociatedWith,`wasAssociatedWith`>>
+//| [[slots_table.wasAssociatedWith]]<<wasAssociatedWith,`wasAssociatedWith`>>
+| 0..1 +
+xref::class/Agent.adoc[`Agent`]
+| +++An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#endedAtTime]
+=== `endedAtTime`
++++End is when an activity is deemed to have been ended by an entity, known as trigger. The activity no longer exists after its end. Any usage, generation, or invalidation involving an activity precedes the activity's end. An end may refer to a trigger entity that terminated the activity, or to an activity, known as ender that generated the trigger.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://www.w3.org/ns/prov#endedAtTime[`prov:endedAtTime`]
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Datetime[`datetime`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.endedAtTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#wasAssociatedWith]
+=== `wasAssociatedWith`
++++An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://www.w3.org/ns/prov#wasAssociatedWith[`prov:wasAssociatedWith`]
+| Cardinality
+| 0..1
+| Type
+| xref::class/Agent.adoc[`Agent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.wasAssociatedWith,&#10548;>>
+--
+////
+
+
+
 
 
 == Used by
 
 
-This class is not used by any other classes as the range of a slot.
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Entity.adoc[`Entity`] | xref::class/Entity.adoc#wasGeneratedBy[`wasGeneratedBy`]
+
+
+|===
+

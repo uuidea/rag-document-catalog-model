@@ -192,17 +192,120 @@
 <div class="sect1">
 <h2 id="_slots"><a class="anchor" href="#_slots"></a>Slots</h2>
 <div class="sectionbody">
+<div class="imageblock kroki">
+<div class="content">
+<img src="../_images/svg-edc81f1165ae846e596dd87f488df9c1cc499804.svg" alt="Associated classes">
+</div>
+<div class="title">Figure 1. Associated classes</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Inherited from</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#endedAtTime"><code>endedAtTime</code></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1<br>
+<a href="https://w3id.org/linkml/Datetime"><code>datetime</code></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">End is when an activity is deemed to have been ended by an entity, known as trigger. The activity no longer exists after its...</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>n/a</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#wasAssociatedWith"><code>wasAssociatedWith</code></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1<br>
+<a href="Agent.html" class="xref page"><code>Agent</code></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role...</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>n/a</em></p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="sect2">
+<h3 id="endedAtTime"><a class="anchor" href="#endedAtTime"></a><code>endedAtTime</code></h3>
 <div class="paragraph">
-<p>This class has no slots.</p>
+<p>End is when an activity is deemed to have been ended by an entity, known as trigger. The activity no longer exists after its end. Any usage, generation, or invalidation involving an activity precedes the activity's end. An end may refer to a trigger entity that terminated the activity, or to an activity, known as ender that generated the trigger.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 65%;">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">URI</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/ns/prov#endedAtTime"><code>prov:endedAtTime</code></a></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Cardinality</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Type</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://w3id.org/linkml/Datetime"><code>datetime</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="wasAssociatedWith"><a class="anchor" href="#wasAssociatedWith"></a><code>wasAssociatedWith</code></h3>
+<div class="paragraph">
+<p>An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 65%;">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">URI</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/ns/prov#wasAssociatedWith"><code>prov:wasAssociatedWith</code></a></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Cardinality</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Type</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="Agent.html" class="xref page"><code>Agent</code></a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_used_by"><a class="anchor" href="#_used_by"></a>Used by</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>This class is not used by any other classes as the range of a slot.</p>
-</div>
+<table class="tableblock frame-all grid-all" style="width: 65%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Source class</th>
+<th class="tableblock halign-left valign-top">Slot name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="Entity.html" class="xref page"><code>Entity</code></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="Entity.html#wasGeneratedBy" class="xref page"><code>wasGeneratedBy</code></a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <nav class="pagination">

@@ -26,7 +26,326 @@
 == Slots
 
 
-This class has no slots.
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+Asset {
+  style {
+    fill: "#cccccc"
+    shadow: true
+  }
+}
+
+
+
+AssetDistribution {
+  style {
+    fill: "#cccccc"
+    shadow: true
+  }
+}
+
+
+
+Entity {
+  style {
+    fill: "#cccccc"
+    shadow: true
+  }
+}
+
+
+
+Activity {
+  style {
+    fill: "#cccccc"
+    shadow: true
+  }
+}
+
+
+
+
+Asset -> AssetDistribution: distribution
+
+
+Asset -> Entity: wasDerivedFrom
+
+
+Asset -> Activity: wasGeneratedBy
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+
+| <<distribution,`distribution`>>
+//| [[slots_table.distribution]]<<distribution,`distribution`>>
+| 0..* +
+xref::class/AssetDistribution.adoc[`AssetDistribution`]
+| +++An available distribution of the dataset.+++
+| _n/a_
+
+| <<title,`title`>>
+//| [[slots_table.title]]<<title,`title`>>
+| 1 +
+https://w3id.org/linkml/String[`string`]
+| +++A name given to the resource.+++
+| _n/a_
+
+| <<modified,`modified`>>
+//| [[slots_table.modified]]<<modified,`modified`>>
+| 1 +
+https://w3id.org/linkml/String[`string`]
+| +++Most recent date on which the resource was changed, updated or modified.+++
+| xref::class/Entity.adoc[`Entity`]
+
+| <<wasDerivedFrom,`wasDerivedFrom`>>
+//| [[slots_table.wasDerivedFrom]]<<wasDerivedFrom,`wasDerivedFrom`>>
+| 0..* +
+xref::class/Entity.adoc[`Entity`]
+| +++A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the...+++
+| xref::class/Entity.adoc[`Entity`]
+
+| <<wasGeneratedBy,`wasGeneratedBy`>>
+//| [[slots_table.wasGeneratedBy]]<<wasGeneratedBy,`wasGeneratedBy`>>
+| 0..* +
+xref::class/Activity.adoc[`Activity`]
+| +++Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and...+++
+| xref::class/Entity.adoc[`Entity`]
+|===
+
+'''
+
+
+//[discrete]
+[#description]
+=== `description`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://purl.org/dc/terms/description[`dct:description`]
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#distribution]
+=== `distribution`
++++An available distribution of the dataset.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://www.w3.org/ns/dcat#distribution[`dcat:distribution`]
+| Cardinality
+| 0..*
+| Type
+| xref::class/AssetDistribution.adoc[`AssetDistribution`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.distribution,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#modified]
+=== `modified`
++++Most recent date on which the resource was changed, updated or modified.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://purl.org/dc/terms/modified[`dct:modified`]
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Entity.adoc[`Entity`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.modified,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#title]
+=== `title`
++++A name given to the resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://purl.org/dc/terms/title[`dct:title`]
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.title,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#wasDerivedFrom]
+=== `wasDerivedFrom`
++++A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://www.w3.org/ns/prov#wasDerivedFrom[`prov:wasDerivedFrom`]
+| Cardinality
+| 0..*
+| Type
+| xref::class/Entity.adoc[`Entity`]
+
+| Inherited from
+| xref::class/Entity.adoc[`Entity`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.wasDerivedFrom,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#wasGeneratedBy]
+=== `wasGeneratedBy`
++++Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://www.w3.org/ns/prov#wasGeneratedBy[`prov:wasGeneratedBy`]
+| Cardinality
+| 0..*
+| Type
+| xref::class/Activity.adoc[`Activity`]
+
+| Inherited from
+| xref::class/Entity.adoc[`Entity`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.wasGeneratedBy,&#10548;>>
+--
+////
+
+
+
 
 
 == Used by

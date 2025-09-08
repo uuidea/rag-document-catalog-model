@@ -13,7 +13,7 @@ prefixes:
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   sh: http://www.w3.org/ns/shacl#
-  skos: http://www.w3.org/2004/02/skos/core#
+  skos: http://www.w3.org/4/02/skos/core#
   xsd: http://www.w3.org/2001/XMLSchema#
   adms: http://www.w3.org/ns/adms#
 
@@ -32,10 +32,26 @@ classes:
       An entity is a physical, digital, conceptual, or other kind of thing with 
       some fixed aspects; entities may be real or imaginary. 
     class_uri: prov:Entity   
-    slots:
-      - wasDerivedFrom
-      - wasGeneratedBy
-      - modified
+    attributes:
+      wasDerivedFrom:
+        description:
+          A derivation is a transformation of an entity into another, an update of an entity 
+          resulting in a new one, or the construction of a new entity based on a pre-existing entity.
+        slot_uri: prov:wasDerivedFrom
+        range: Entity
+        required: false
+        multivalued: true
+      wasGeneratedBy:
+        description: 
+          Generation is the completion of production of a new entity by an activity. 
+          This entity did not exist before generation and becomes available for usage after this generation.
+        slot_uri: prov:wasGeneratedBy
+        range: Activity
+      modified:
+        description: Most recent date on which the resource was changed, updated or modified.
+        slot_uri: dct:modified
+        required: true
+        multivalued: false
 
   Asset: 
     description: 
@@ -43,11 +59,24 @@ classes:
       some fixed aspects; entities may be real or imaginary. 
     is_a: Entity   
     class_uri: adms:Asset
-    slots:
-      - title
-      - description
-      - distribution  
-
+    attributes:
+      title:
+        description: A name given to the resource.
+        slot_uri: dct:title
+        range: string
+        required: true
+        multivalued: false
+      description:
+        slot_uri: dct:description
+        range: string
+        required: true
+        multivalued: false
+      distribution:
+        description: An available distribution of the dataset.
+        slot_uri: dcat:distribution
+        range: AssetDistribution
+        required: false
+        multivalued: true
 
   AssetDistribution:
     description: 
@@ -56,7 +85,6 @@ classes:
       embodiment of an expression of a work). 
     is_a: Entity    
     class_uri: adms:AssetDistribution  
-
 
   MarkDownFile:
     description: 
@@ -73,8 +101,12 @@ classes:
   FileFormat:
     description: A digital resource format.
     class_uri: dct:FileFormat
-    slots:
-     - description  
+    attributes:
+      description:
+        slot_uri: dct:description
+        range: string
+        required: true
+        multivalued: false
 
   Activity:
     description: 
@@ -83,9 +115,34 @@ classes:
       include consuming, processing, transforming, modifying, 
       relocating, using, or generating entities.
     class_uri: prov:Activity
-    slots:
-      - endedAtTime
-      - wasAssociatedWith
+    attributes:
+      endedAtTime:
+        description: 
+          End is when an activity is deemed to have been 
+          ended by an entity, known as trigger. The activity 
+          no longer exists after its end. Any usage, 
+          generation, or invalidation involving an activity 
+          precedes the activity's end. An end may refer to 
+          a trigger entity that terminated the activity, or 
+          to an activity, known as ender that generated the 
+          trigger.
+        slot_uri: prov:endedAtTime 
+        range: datetime
+        required: false
+        multivalued: false
+      wasAssociatedWith:
+        description:
+          An activity association is an assignment of 
+          responsibility to an agent for an activity, 
+          indicating that the agent had a role in the 
+          activity. It further allows for a plan to be 
+          specified, which is the plan intended by the 
+          agent to achieve some goals in the context 
+          of this activity.
+        slot_uri: prov:wasAssociatedWith 
+        range: Agent
+        required: false
+        multivalued: false 
 
   Agent:
     description:
@@ -97,103 +154,22 @@ classes:
   SoftwareAgent:
     description: A software agent is running software.
     class_uri: prov:SoftwareAgent
-    slots:
-      - title
-      - version
-      - accessURL
-
-
-slots:
-  distribution:
-    description: An available distribution of the dataset.
-    slot_uri: dcat:distribution
-    range: AssetDistribution
-    required: false
-    multivalued: true
-
-  modified:
-    description: Most recent date on which the resource was changed, updated or modified.
-    slot_uri: dct:modified
-    required: true
-    multivalued: false
-
-  wasDerivedFrom:
-    description:
-      A derivation is a transformation of an entity into another, an update of an entity 
-      resulting in a new one, or the construction of a new entity based on a pre-existing entity.
-    slot_uri: prov:wasDerivedFrom
-    range: Entity
-    required: false
-    multivalued: true
-
-  wasGeneratedBy:
-    description: 
-      Generation is the completion of production of a new entity by an activity. 
-      This entity did not exist before generation and becomes available for usage after this generation.
-    slot_uri: prov:wasGeneratedBy
-    range: Activity
-  
-  title:
-    description: A name given to the resource.
-    slot_uri: dct:title
-    range: string
-    required: true
-    multivalued: false
-
-  description:
-    slot_uri: dct:description
-    range: string
-    required: true
-    multivalued: false
-
-  accessURL:
-    slot_uri: dcat:accessURL
-    range: Uriorcurie
-    required: false
-    multivalued: false 
-
-  format:
-    slot_uri: dct:format
-    range: FileFormat
-    required: true
-    multivalued: false    
-
-  endedAtTime:
-    description: 
-      End is when an activity is deemed to have been 
-      ended by an entity, known as trigger. The activity 
-      no longer exists after its end. Any usage, 
-      generation, or invalidation involving an activity 
-      precedes the activity's end. An end may refer to 
-      a trigger entity that terminated the activity, or 
-      to an activity, known as ender that generated the 
-      trigger.
-    slot_uri: prov:endedAtTime 
-    range: datetime
-    required: false
-    multivalued: false
-
-  wasAssociatedWith:
-    description:
-      An activity association is an assignment of 
-      responsibility to an agent for an activity, 
-      indicating that the agent had a role in the 
-      activity. It further allows for a plan to be 
-      specified, which is the plan intended by the 
-      agent to achieve some goals in the context 
-      of this activity.
-    slot_uri: prov:wasAssociatedWith 
-    range: Agent
-    required: false
-    multivalued: false 
-
-  version:
-    description: The version indicator (name or identifier) of a resource.
-    slot_uri: dcat:version
-    range: string
-    required: true
-    multivalued: false  
-
-    
-
+    attributes:
+      title:
+        description: A name given to the resource.
+        slot_uri: dct:title
+        range: string
+        required: true
+        multivalued: false
+      version:
+        description: The version indicator (name or identifier) of a resource.
+        slot_uri: dcat:version
+        range: string
+        required: true
+        multivalued: false  
+      accessURL:
+        slot_uri: dcat:accessURL
+        range: Uriorcurie
+        required: false
+        multivalued: false 
 

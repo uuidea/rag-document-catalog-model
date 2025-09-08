@@ -25,7 +25,50 @@
 == Slots
 
 
-This class has no slots.
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#description]
+=== `description`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://purl.org/dc/terms/description[`dct:description`]
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+
 
 
 == Used by
